@@ -1,0 +1,104 @@
+body{
+    background-color: rgb(10, 10, 10);
+    /* background-image: url('https://images.unsplash.com/photo-1520034475321-cbe63696469a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8'); */
+    background-image: url('');
+    color: #ffffff;
+    
+}
+#title{
+    filter: invert();
+    width: 800px;
+    position: absolute;
+    top: 5%;
+    left: 400px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+#titlea{
+    font-size: 40px;
+    position: absolute;
+    top: 20%;
+    left: 140px;
+    color: white;
+}
+#titleb{
+    transition: 500ms;
+    position: absolute;
+    font-size: 40px;
+    top: 20%;
+    left: 530px;
+    color: white;
+}
+
+#titleb span {
+      display: inline-block;
+      animation: wave 1.5s infinite ease-in-out;
+     
+      
+}
+#titleb span:nth-child(1) { animation-delay: 0s; }
+#titleB span:nth-child(2) { animation-delay: 0.1s; }
+#titleB span:nth-child(3) { animation-delay: 0.2s; }
+#titleb span:nth-child(4) { animation-delay: 0.3s; }
+#titleb span:nth-child(5) { animation-delay: 0.4s; }
+#titleb span:nth-child(6) { animation-delay: 0.5s; }
+#titleb span:nth-child(7) { animation-delay: 0.6s; }
+@keyframes wave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+}
+#titleRemover{
+    position: absolute;
+    top: 5%;   
+    left: 900px;
+    width: 150px;
+    height: 150px;
+}
+#titlec {
+    font-size: 40PX;
+  position: absolute;
+  left: 25%;   
+  top: 20%;
+  transition: font-size 0.5s ease-in-out;
+}
+#mars{
+    position: absolute;
+    top: 50%;
+}
+#mars-desc{
+    position: absolute;
+    left: 30%;
+    width: 400px;
+}
+#mars-desc2{
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    width: 300px;
+}
+#illustrationsmth{
+    position: absolute;
+    top: 50%;
+    left: 900px;
+    width: 400px;
+    height: 300px;
+}
+#mars-activity{
+    transition: 900ms;
+    position: absolute;
+    top: 400px;
+    font-size: xx-large;
+}
+#mars-activitydesc{
+    position: absolute;
+    top: 500px;
+    left: 100px;
+    width: 600px;
+}
+#mars-cost{
+    width: 1000px;
+    font-size: 20px;
+    position: absolute;
+    top: 750px;
+}
