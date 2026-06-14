@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,73 +9,214 @@
     <link rel="icon" type="image" href="/icon.avif">
     <title>SpaceB space reccomandition</title>
 </head>
-<body> 
-    <!-- IMAGES ADJUST IF NEEDED -->
-    <div><img src="https://i.pinimg.com/originals/95/9f/b1/959fb1f51bc1026ace27acede55e1bc8.gif" alt="" style="height: 3500px; max-width: 100%;"> </div>
 
-    <!-- TITLE -->
-    <p id="titlea" style="position: absolute;left: 440px;"> space</h1>
-    <p id="titleb" ><span>e</span><span>e</span><span>e</span><span>e</span><span>e</span><span>e</span><span>e</span></h2>
-    <p id="titlec" style="position: absolute; left: 675px;">recommendation</p>
-    <div id-="icon">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/SpaceX_Logo_Black.png" alt="" id="title">
-        <img src="https://media.desenio.com/site_images/67f90f8119ffe1b4827f6833_1202199751_pp0258-5_variant_main_image_DS.jpg?auto=compress%2Cformat&fit=max&w=3840" alt="" id="titleRemover" >
-    <!-- MARS  -->
-    </div>
-    <div id="mars">
-        <h1 id="mars-name" >Mars.</h1>
-        <h2 id="mars-dis">233.19Km away from sun.</h2>
-        <p id="mars-desc" style="width: 8in; height: 250px;">
-            Mars is a Terrestrial planet and is habitable for humans ( Since we're in 2050 ). The average temputure is -63C  to  20C to the hottest. <br>
-            Further description:
-                                <p id="mars-desc2" style="width: 500px;">
-                                    • The tilt is 25 degrees. <br>
-                                    • A whole rotation period is 24 hours and 37 minutes. Nearly as earth rotation period. <br>
-                                    • Size is 144km.<br>
-                                    • Mars has 2 moons, Phobios and Demios. <br>
-                                </p>
-        </p>
-        <iframe src="https://solarsystem.nasa.gov/gltf_embed/2372"  frameborder="0" id="illustrationsmth"></iframe>
-        <h3 id="mars-activity">Activies 
-        </h3>
+        <!-- The background container that handles the crop and image tinting -->
+<div class="crop"> 
+  <!-- 1. The Background Image -->
+  <img src="https://www.sundt.com/wp-content/uploads/2019/08/Featured-Image_Launch-Pad-39A.webp" alt="" class="banner-bg"> 
+
+  <!-- 2. The Corrected SPACEB Icon Layer -->
+  <div id="icon">
+    <!-- SpaceX Logo: Replaced duplicate id="title" with id="spacex-logo" -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/SpaceX_Logo_Black.png" alt="SpaceX" id="spacex-logo">
+    
+    <!-- B Card Overlay -->
+    <img src="https://media.desenio.com/site_images/67f90f8119ffe1b4827f6833_1202199751_pp0258-5_variant_main_image_DS.jpg?auto=compress%2Cformat&fit=max&w=3840" alt="SpaceB" id="titleRemover">
+  </div>
+
+  <!-- 3. The Text Layer Box -->
+  <div id="title-text-wrap">
+    <p id="titlea">space</p>
+    <p id="titleb">
+      <span>e</span><span>e</span><span>e</span><span>e</span><span>e</span><span>e</span><span>e</span>
+    </p>
+    <p id="titlec" style="color: white;">recommendation</p>
+  </div>
+</div>
+
+<style>
+/* --- MAIN BANNER FRAME --- */
+.crop {
+  position: relative;       /* Anchors all absolute items inside this banner container */
+  width: device-width;             
+  height: 400px;            
+  overflow: hidden;         
+  border-radius: 8px;       
+  background-color: #000;   
+}
+
+.crop .banner-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        
+  object-position: 65% 50%; 
+  filter: brightness(50%);  
+  display: block;           
+}
+
+/* --- ICON WRAPPER & GRAPHICS --- */
+#icon {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;     
+}
+
+#spacex-logo {
+  position: absolute;
+  top: 5%;
+  left: 550px;
+  width: 900px;             /* Keeps the SpaceX asset contained */
+  height: auto;
+  filter: invert(1);        /* Inverts the black logo asset to crisp white */
+}
+
+#titleRemover {
+  position: absolute;
+  top: 5%;   
+  left: 1150px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;       
+}
+
+/* --- THE RUNNING TEXT LAYOUT --- */
+#title-text-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#titlea {
+  font-size: 40px;
+  position: absolute;
+  top: 40%;               
+  left: 690px;
+  color: white;
+  margin: 0;
+}
+
+#titleb {
+  transition: 500ms;
+  position: absolute;
+  font-size: 40px;
+  top: 40%;               
+  left: 780px;            
+  color: white;
+  margin: 0;
+}
+
+#titleb span {
+  display: inline-block;
+  animation: wave 1.5s infinite ease-in-out;
+}
+
+#titleb span:nth-child(1) { animation-delay: 0s; }
+#titleb span:nth-child(2) { animation-delay: 0.1s; }
+#titleb span:nth-child(3) { animation-delay: 0.2s; }
+#titleb span:nth-child(4) { animation-delay: 0.3s; }
+#titleb span:nth-child(5) { animation-delay: 0.4s; }
+#titleb span:nth-child(6) { animation-delay: 0.5s; }
+#titleb span:nth-child(7) { animation-delay: 0.6s; }
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); } 
+}
+
+#titlec {
+  font-size: 40px;
+  position: absolute;
+  left: 50%;               
+  top: 40%;               
+  transition: font-size 0.5s ease-in-out;
+  margin: 0;
+}
+</style>
+
+        <div class="AboutUs">
+            <h1>About us</h1>
+            <p> Established in 2032, SpaceB is a pioneering space agency dedicated to the advancement of human civilisation beyond Earth. Our primary mission involves the development and implementation of <u>terraforming</u> technologies to create habitable environments on distant planets and moons. At SpaceB, we are committed to providing more space for human civilisation, fostering opportunities for long-term stays and even vacation opportunities in space. Through innovation and dedication, we aim to expand the horizons of human presence in the cosmos, ensuring a sustainable and thriving future for generations to come. 
+                
+                For a better prespective and accuracy please check <a href="education.html">about.spaceB.com</a> </p>
+        </div>
+        <!-- MARS  -->
+        <div id="mars" clas="mars" >
+            <h1 id="mars-name">Mars.</h1>
+            <h2 id="mars-dis">233.19Km away from sun.</h2>
+            <p id="mars-desc" style="width: 8in; height: 250px;">
+                Mars is a Terrestrial planet and is habitable for humans ( Since we're in 2050 ). The average temputure
+                is
+                -63C to 20C to the hottest. <br>
+                Further description:
+            <p id="mars-desc2" style="width: 500px;">
+                • The tilt is 25 degrees. <br>
+                • A whole rotation period is 24 hours and 37 minutes. Nearly as earth rotation period. <br>
+                • Size is 144km.<br>
+                • Mars has 2 moons, Phobios and Demios. <br>
+            </p>
+            </p>
+            <iframe src="https://solarsystem.nasa.gov/gltf_embed/2372" frameborder="0" id="illustrationsmth"
+                style="position: absolute; top: 100px;"></iframe>
+            <h3 id="mars-activity">Activies
+            </h3>
 
             <p id="mars-activitydesc" style="width: 500px; position: absolute; top: 470px;">
                 Activies are included in vacations or long terms stay.
                 <br> &nbsp;&nbsp; • Activies includes:
-                <br> &nbsp;&nbsp;  • Exploring caves,
+                <br> &nbsp;&nbsp; • Exploring caves,
                 <br> &nbsp;&nbsp; • Racing rovers,
                 <br> &nbsp;&nbsp; • And Sky diving.
             </p>
-            <h2 style="font-size: 50px; top: 560px; position: absolute;">Costs:</h2>
-        <p id="mars-cost" style="position: absolute;top: 600px; width: 1000px;">
-            <br>For vacations are 2000$ for 10~40 days stay.
-            <br> For a long term stay is 5000$ to 1 to a life time stay.
-            includes with:
-            <br> &nbsp; &nbsp; &nbsp; &nbsp; • 30 Day temp home and if stay for longer will must pay rent 800$ a month. ( Both vacations and long term use)
-            <br> &nbsp; &nbsp; &nbsp; &nbsp; • A job or college if needed. ( Long term uses )
-            <br> &nbsp; &nbsp; &nbsp; &nbsp; • A bulid in pool and cinema.
-            <br> &nbsp; &nbsp; &nbsp; &nbsp; • Request for furniture. ( Long term use only.)
-        </p>
-    </div>
-    <!-- JUPITER -->
-    <div id="jupiter">
-        <h1 id="jupiter-name" style="position: absolute; top: 1500px;">Jupiter</h1>
-        <h2 id="distant-jup" style="position: absolute;top: 1545px;">~773 KM away from us, or 2-3 AU</h2>
-        <p id="jup-desc">Jupiter is the largest planet that we have terraformed and probably the most beautifuliest planet you'll ever visit, You should visit <u>Ralada</u> as it is the best city you can ever imagine.</p>
-        <h1 id="activity-jup"></h1>
-        <p id="activitydesc-jup"></p>
-    </div>
-    <!-- TITAN -->
-     <div id="titan">
+            <h2 style="font-size: 50px; top: 610px; position: absolute;">Costs:</h2>
+            <p id="mars-cost" style="position: absolute;top: 650px; width: 1000px;">
+                <br>For vacations are 2000$ for 10~40 days stay.
+                <br> For a long term stay is 5000$ to 1 to a life time stay.
+                includes with:
+                <br> &nbsp; &nbsp; &nbsp; &nbsp; • 30 Day temp home and if stay for longer will must pay rent 800$ a
+                month.
+                ( Both vacations and long term use)
+                <br> &nbsp; &nbsp; &nbsp; &nbsp; • A job or college if needed. ( Long term uses )
+                <br> &nbsp; &nbsp; &nbsp; &nbsp; • A bulid in pool and cinema.
+                <br> &nbsp; &nbsp; &nbsp; &nbsp; • Request for furniture. ( Long term use only.)
+            </p>
+        </div>
+        <style>
+            #mars{
+                position: absolute;
+                top: 600px;
+            }
+        </style>
+        <!-- JUPITER -->
+        <div id="jupiter" style=" position: absolute; top:300px">
+            <h1 id="jupiter-name" style="position: absolute; top: 1500px;">Jupiter</h1>
+            <h2 id="distant-jup" style="position: absolute;top: 1545px;">~773 KM away from us, or 2-3 AU</h2>
+            <p id="jup-desc" style="position: absolute;top: 1600px;">Jupiter is the largest planet that we have
+                terraformed
+                and probably the most beautifuliest planet you'll ever visit, You should visit <u>Ralada</u> as it is
+                the
+                best city you can ever imagine.</p>
+            <h1 id="activity-jup"></h1>
+            <p id="activitydesc-jup"></p>
+        </div>
+        <!-- TITAN -->
+        <div id="titan">
 
-     </div>
-    <!-- PLUTO -->
-    <div id="pluto"></div>
-     <!-- Moon -->
-      <div></div>
-    <!-- Video -->
-     <video src=""></video>
-    <img src="" alt="">
+        </div>
+        <!-- PLUTO -->
+        <div id="pluto"></div>
+        <!-- Moon -->
+        <div></div>
+        <!-- Video -->
+        <!-- <video src=""></video> -->
+        <img src="" alt="">
 
 </body>
+
 </html>

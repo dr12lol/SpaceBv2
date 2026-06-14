@@ -1,8 +1,8 @@
 body{
-    background-color: rgb(10, 10, 10);
-    /* background-image: url('https://images.unsplash.com/photo-1520034475321-cbe63696469a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8'); */
+    background-color: rgb(255, 255, 255);
+   
     background-image: url('');
-    color: #ffffff;
+    color: #000000;
     
 }
 @font-face {
@@ -21,42 +21,10 @@ h2{
 p{
     font-size: 20px;
     padding: 5px;
-    
+        
 }
 
-#title{
-    filter: invert();
-    width: 800px;
-    position: absolute;
-    top: 5%;
-    left: 400px;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-}
-#titlea{
-    font-size: 40px;
-    position: absolute;
-    top: 20%;
-    left: 140px;
-    color: white;
-}
-#titleb{
-    transition: 500ms;
-    position: absolute;
-    font-size: 40px;
-    top: 20%;
-    left: 530px;
-    color: white;
-}
-
-#titleb span {
-      display: inline-block;
-      animation: wave 1.5s infinite ease-in-out;
-     
-      
-}
-#titleb span:nth-child(1) { animation-delay: 0s; }
+/* #titleb span:nth-child(1) { animation-delay: 0s; }
 #titleB span:nth-child(2) { animation-delay: 0.1s; }
 #titleB span:nth-child(3) { animation-delay: 0.2s; }
 #titleb span:nth-child(4) { animation-delay: 0.3s; }
@@ -66,8 +34,8 @@ p{
 @keyframes wave {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-20px); }
-}
-#titleRemover{
+} */
+/* #titleRemover{
     position: absolute;
     top: 5%;   
     left: 900px;
@@ -80,7 +48,7 @@ p{
   left: 25%;   
   top: 20%;
   transition: font-size 0.5s ease-in-out;
-}
+} */
 #mars{
     position: absolute;
     top: 50%;
