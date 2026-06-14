@@ -5,6 +5,25 @@ body{
     color: #ffffff;
     
 }
+@font-face {
+    font-family: 'Funky';
+    src: url(font.ttf) format('truetype');
+    font-style: normal;
+    font-weight: lighter;
+}
+
+h1{
+    font-family: 'Funky';
+}
+h2{
+    size: 10c;
+}
+p{
+    font-size: 20px;
+    padding: 5px;
+    
+}
+
 #title{
     filter: invert();
     width: 800px;
@@ -96,9 +115,4 @@ body{
     left: 100px;
     width: 600px;
 }
-#mars-cost{
-    width: 1000px;
-    font-size: 20px;
-    position: absolute;
-    top: 750px;
-}
+
